@@ -2,12 +2,7 @@ body {
   margin: 20px;
 }
 <style>
-.test {
-  background-color: lightblue;
-}
-{
-  background-color: white;
-}
+background: linear-gradient(to bottom, #5d326c, #350048); /*violet*/
 .@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 
      * {
