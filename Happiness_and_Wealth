@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+<div class="testimonial">
+
+  <h1>
+    Group project of Course 'Data Visualization' 2022-23
+  </h1>
+
+  <div class="line"></div>
+
+  <h1>
+    'Global Happiness Atlas:
+    Exploring the Nexus of Peace, Education, and Wealth'
+  </h1>
+
+  <h1>
+    Team 2
+  </h1>
+
+  <div class="line"></div>
+
+  <script src="script.js"></script>
+
+  <h1>
+    Does wealth affect happiness of people and to which extent?
+  </h1>
+  <div class="line"></div>
+  <script type='module' src='https://prod-uk-a.online.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js'>
+
+  </script>
+  <tableau-viz id='tableau-viz' src='https://prod-uk-a.online.tableau.com/t/httpseirgargithubiogroupprojectteam2/views/Happinessrankmap/Dashboard1' width='1366' height='808' hide-tabs toolbar='bottom' >
+
+  </tableau-viz>
+
+  <h1>References</h1>
+  <div class="line"></div>
+
+  <div class="container">
+    <div class="btn"><a href="Happiness_and_Peace.html">Happiness and Peace dependency</a></div>
+    <div class="btn"><a href="Happiness_and_Education.html" >Happiness and Education dependency</a></div>
+    <div class="btn"><a href="index.html" >Home Page</a></div>
+
+  </div>
+
+</div>
+
+  </script>
+
+</body>
+
+</html>
