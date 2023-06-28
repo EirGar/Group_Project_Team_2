@@ -2,71 +2,76 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>Browser</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Browser</title>
 </head>
 
 <body>
 <div class="testimonial">
 
-  <h1>
-    Group project of Course 'Data Visualization' 2022-23
-  </h1>
-	
-<div class="line"></div>
-	
-<h1>
- 'Global Happiness Atlas:
-  Exploring the Nexus of Peace, Education, and Wealth'
-</h1>
-	
-<h1>
-  Team 2
-</h1>
-	
-<div class="line"></div>
-  
-<script src="script.js"></script>
-	
-<h1>
-  Visualizations
-</h1>
-<div class="line"></div>
-	
-<div class="container">
-		<div class="btn"><a href="#">Happiness and Peace connection</a></div>
-		<div class="btn"><a href="#" >Happiness and Education connection</a></div>
-		<div class="btn"><a href="#" >Happiness and Wealth connection</a></div>
+    <h1>
+        Group project of Course 'Data Visualization' 2022-23
+    </h1>
 
-</div>	
-	
-<div class="line"></div>
-  
-      <h1>Team members</h1>
-      <div class="line"></div>
-      <!-- arrow wrapper contains the review and the arrows -->
-      <div class="arrow-wrapper">
-          <!-- review section -->
-          <div id="reviewWrap" class="review-wrap">
-              <div id="imgBox"></div>
-              <div id="name"></div>
-              <div id="profession"></div>
-              <div id="description"></div>
-          </div>
-          <!-- left arrow -->
-          <div class="left-arrow-wrap">
-              <div class="arrow"></div>
-          </div>
-          <!-- right arrow -->
-          <div class="right-arrow-wrap">
-              <div class="arrow"></div>
-          </div>
-      </div>
-  </div>
+    <div class="line"></div>
 
-  <script>
+    <h1>
+        'Global Happiness Atlas:
+        Exploring the Nexus of Peace, Education, and Wealth'
+    </h1>
+
+    <h1>
+        Team 2
+    </h1>
+
+    <div class="line"></div>
+
+    <script src="script.js"></script>
+
+    <h1>
+        Visualizations
+    </h1>
+    <div class="line"></div>
+
+    <div class="container">
+        <div class="btn"><a href="Happiness_and_Peace.html">Happiness and Peace dependency</a></div>
+        <div class="btn"><a href="Happiness_and_Education.html" >Happiness and Education dependency</a></div>
+        <div class="btn"><a href="Happiness_and_Wealth.html" >Happiness and Wealth dependency</a></div>
+
+    </div>
+
+    <div class="line"></div>
+
+    <h1>Presentation of Site</h1>
+    <div class="line"></div>
+
+    <h1>Team members</h1>
+    <div class="line"></div>
+    <!-- arrow wrapper contains the review and the arrows -->
+    <div class="arrow-wrapper">
+        <!-- review section -->
+        <div id="reviewWrap" class="review-wrap">
+            <div id="imgBox"></div>
+            <div id="name"></div>
+            <div id="profession"></div>
+            <div id="description"></div>
+        </div>
+        <!-- left arrow -->
+        <div class="left-arrow-wrap">
+            <div class="arrow"></div>
+        </div>
+        <!-- right arrow -->
+        <div class="right-arrow-wrap">
+            <div class="arrow"></div>
+        </div>
+    </div>
+</div>
+
+
+
+<script>
     const reviewWrap = document.getElementById("reviewWrap");
     const leftArrow = document.querySelector(".left-arrow-wrap .arrow");
     const rightArrow = document.querySelector(".right-arrow-wrap .arrow");
@@ -128,7 +133,7 @@
     }
 
     function setNextCardLeft() {
-      if (currentPerson === 3) {
+      if (currentPerson === 2) {
         currentPerson = 0;
         slide("left", currentPerson);
       } else {
@@ -140,7 +145,7 @@
 
     function setNextCardRight() {
       if (currentPerson === 0) {
-        currentPerson = 3;
+        currentPerson = 2;
         slide("right", currentPerson);
       } else {
         currentPerson--;
@@ -151,6 +156,7 @@
 
     leftArrow.addEventListener("click", setNextCardLeft);
     rightArrow.addEventListener("click", setNextCardRight);
+
   </script>
 
 </body>
