@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Browser</title>
+</head>
+
+<body>
+<div class="testimonial">
+
+  <h3>
+    Data Visualization, 2022-2023
+  </h3>
+  <h3>
+    Department of Informatics & Telecommunications, NKUA
+  </h3>
+  <img src="https://www.trust-itservices.com/sites/default/files/images/logo/NKUA_Logo.png" alt="NKUA Logo" width="150" height="100">
+  <h1>  'Global Happiness Atlas:
+    Exploring the Nexus of Peace, Education, and Wealth'
+  </h1>
+  <div class="line"></div>
+
+  <script src="script.js"></script>
+  <div class="container">
+    <div class="btn"><a href="Video_of_Site.html">Presentation</a></div>
+    <div class="btn"><a href="References.html">References</a></div>
+    <div class="btn"><a href="index.html">Home Page</a></div>
+  </div>
+  <p>
+
+  </p>
+
+  <p>
+
+  </p>
+  <h1>  Team members
+  </h1>
+  <div class="line"></div>
+  <!-- arrow wrapper contains the review and the arrows -->
+  <div class="arrow-wrapper">
+    <!-- review section -->
+    <div id="reviewWrap" class="review-wrap">
+      <div id="imgBox"></div>
+      <div id="name"></div>
+      <div id="profession"></div>
+      <div id="description"></div>
+    </div>
+    <!-- left arrow -->
+    <div class="left-arrow-wrap">
+      <div class="arrow"></div>
+    </div>
+    <!-- right arrow -->
+    <div class="right-arrow-wrap">
+      <div class="arrow"></div>
+    </div>
+  </div>
+
+</div>
+<script>
+    const reviewWrap = document.getElementById("reviewWrap");
+    const leftArrow = document.querySelector(".left-arrow-wrap .arrow");
+    const rightArrow = document.querySelector(".right-arrow-wrap .arrow");
+    const imgBox = document.getElementById("imgBox");
+    const name = document.getElementById("name");
+    const profession = document.getElementById("profession");
+    const description = document.getElementById("description");
+
+    let people = [{
+        photo: 'url("https://media.licdn.com/dms/image/D4D03AQF8-5pPMudwlg/profile-displayphoto-shrink_800_800/0/1666279212513?e=2147483647&v=beta&t=wTgNyQKF3nP99x1qV_CwLlOG7Rmk4CbFCm_YmcOGuow")',
+        name: "Gardelakos Eirinaios Odysseas",
+        profession: "Engineer-Software Developer",
+        description: "Currently studying Computer Science and working as a Software Developer"
+      },
+      {
+        photo: 'url("https://lh3.googleusercontent.com/pw/AJFCJaX8BwhGDTXt5_4p3mnU0cr31kAYq3bzU4SiLg5oeeyns30ECQPAbcUfHjY6C48wRnARXtoLW8fbZmxDZV39jEz6fA_WHPUKrlPMOOyWfdDy2LDmSPlf_fm2k7BuINeZMWgnR5y64BV0DeSGoISz7ObFXQ=w607-h919-s-no?authuser=0")',
+        name: "Bormpantonaki Despina",
+        profession: "Philologist-Linguist",
+        description: "Currently studying Language Technology and working as a teacher"
+      },
+      {
+        photo: 'url("https://media.licdn.com/dms/image/C5103AQHskPjZKLYljw/profile-displayphoto-shrink_200_200/0/1517553280678?e=1694044800&v=beta&t=YbbLvkpvBkP-rJG2s90QK-WaKvkz4kZNV93QKmBjoZA")',
+        name: "George Kordonis",
+        profession: "Software Engineer",
+        description: "Currently studying Language Technology and working as a Senior Software Engineer"
+      }
+    ];
+
+    // set the first person
+    imgBox.style.backgroundImage = people[0].photo;
+    name.innerText = people[0].name;
+    profession.innerText = people[0].profession;
+    description.innerText = people[0].description;
+    let currentPerson = 0;
+
+    //Select the side where you want to slide
+    function slide(side, personNumber) {
+      let reviewWrapWidth = reviewWrap.offsetWidth + "px";
+      let descriptionHeight = description.offsetHeight + "px";
+      //(+ or -)
+      let side1symbol = side === "left" ? "" : "-";
+      let side2symbol = side === "left" ? "-" : "";
+
+      setTimeout(() => {
+        imgBox.style.backgroundImage = people[personNumber].photo;
+      }, 0);
+      setTimeout(() => {
+        description.style.height = descriptionHeight;
+      }, 100);
+      setTimeout(() => {
+        name.innerText = people[personNumber].name;
+      }, 200);
+      setTimeout(() => {
+        profession.innerText = people[personNumber].profession;
+      }, 300);
+      setTimeout(() => {
+        description.innerText = people[personNumber].description;
+      }, 400);
+    }
+
+    function setNextCardLeft() {
+      if (currentPerson === 2) {
+        currentPerson = 0;
+        slide("left", currentPerson);
+      } else {
+        currentPerson++;
+      }
+
+      slide("left", currentPerson);
+    }
+
+    function setNextCardRight() {
+      if (currentPerson === 0) {
+        currentPerson = 2;
+        slide("right", currentPerson);
+      } else {
+        currentPerson--;
+      }
+
+      slide("right", currentPerson);
+    }
+
+    leftArrow.addEventListener("click", setNextCardLeft);
+    rightArrow.addEventListener("click", setNextCardRight);
+
+  </script>
+
+
+  </script>
+
+</body>
+
+</html>
